@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon",
-    "seed": "node seeders/seeds.js"
+    "seed": "npm run seed",
+    "develop": "concurrently \"npm run watch\" \"cd client && npm start\"",
+    "install": "npm i && cd ../client && npm i"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +23,15 @@
     "mongoose": "^5.9.9"
   },
   "devDependencies": {
+    "concurrently": "^6.2.1",
     "nodemon": "^2.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miguel-Con-Queso/deep-thoughts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Miguel-Con-Queso/deep-thoughts/issues"
+  },
+  "homepage": "https://github.com/Miguel-Con-Queso/deep-thoughts#readme"
 }
